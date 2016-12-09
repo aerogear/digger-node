@@ -5,6 +5,9 @@ require('yargonaut')
   .helpStyle('green')
   .errorsStyle('red');
 
+require("../lib/util/sslSetup")
+  .setupSSLConnections();
+
 var yargs = require('yargs');
 
 yargs.commandDir("../lib/commands")
