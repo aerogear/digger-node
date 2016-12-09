@@ -13,7 +13,7 @@ digkins login http://myjenkins.com
 
 Create job that would use your repository as source code
 ```
-digkins job create my-androip-build https://github.com/android-build/project master
+digkins job create my-job https://github.com/android/project master
 ```
 
 Trigger build
@@ -26,14 +26,17 @@ digkins job build my-androip-build
   Trigger build for Jenkins job
   digkins job build <jobname>                
 
-  Create jenkins job for git repository with Jenkinsfile                         
+  Create jenkins job for git repository with Jenkinsfile
   digkins job create <name> [repository] [branch]  
 
-  Setup jenkins credentials and login into jenkins                          
+  Setup jenkins credentials and login into jenkins 
   digkins login <url> [user] [password] 
 
   Stream jenkins logs for triggered build
   digkins log <job> <queueid>       
+  
+  Get job artifacts for specified build
+  artifact <job> <buildNumber>   
 
   Generate bash completion script
   digkins completion                     
