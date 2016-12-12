@@ -36,7 +36,7 @@ digkins job build my-androip-build
   digkins log <job> <queueid>       
   
   Get job artifacts for specified build
-  artifact <job> <buildNumber>   
+  digkins artifact <job> <buildNumber>   
 
   Generate bash completion script
   digkins completion                     
