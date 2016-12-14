@@ -51,7 +51,7 @@ digkins job build my-androip-build
   digkins login <url> [user] [password] 
 
   Stream jenkins logs for triggered build
-  digkins log <job> <queueid>       
+  digkins log <job> <buildNumber>       
   
   Get job artifacts for specified build
   digkins artifact <job> <buildNumber>   
