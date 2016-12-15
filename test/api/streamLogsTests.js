@@ -1,6 +1,7 @@
-var assert = require('assert');
-var proxyquire = require('proxyquire');
-var sinon = require("sinon");
+const proxyquire = require('proxyquire');
+const sinon = require("sinon");
+const chai = require("chai");
+const assert = chai.assert;
 
 const auth = {
   url: "test",
@@ -20,7 +21,9 @@ const JenkinsWrapper = {
     item: sinon.stub().yields(null, data)
   },
   build: {
-    logStream: () => ({ on: function() { } })
+    logStream: () => ({
+      on: sinon.stub().yields()
+    })
   }
 };
 
@@ -30,17 +33,11 @@ const jenkinsStub = () => JenkinsWrapper;
 var streamLogs = proxyquire("../../lib/api/streamLogs", { 'jenkins': jenkinsStub });
 
 describe('Streaming logs', function() {
-  it('it should return error', function() {
-    JenkinsWrapper.queue.item = sinon.stub().yields("error");
-    streamLogs(auth, jobName, 1, console, function(err) {
-      assert(err);
-    });
-  });
-
-  it('it should stream logs', function() {
+  it('it should stream logs', function(testFinished) {
     JenkinsWrapper.queue.item = sinon.stub().yields(null, data);
     streamLogs(auth, jobName, 1, console, function(err) {
-      assert(!err);
+      assert.isNotOk(err, "Should not return error");
+      testFinished();
     });
   });
 });

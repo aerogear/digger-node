@@ -9,23 +9,29 @@ const auth = {
   password: "password"
 };
 
-const data = {
+const dataMock = {
   executable: {
     number: 1
   }
 };
 
 const JenkinsWrapper = {
-  info: sinon.stub().yields(null, data)
+  job: {
+    build: sinon.stub().yields(null, {})
+  },
+  queue :{
+    item:sinon.stub().yields(null, dataMock)
+  }
 };
+
 
 const jenkinsStub = () => JenkinsWrapper;
 
-var jenkinsInfo = proxyquire("../../lib/api/jenkinsInfo", { 'jenkins': jenkinsStub });
+var triggerBuild = proxyquire("../../lib/api/triggerBuild", { 'jenkins': jenkinsStub });
 
-describe('jenkinsInfo', function() {
-  it('it should return jenkinsInfo', function(testFinished) {
-    jenkinsInfo(auth, function(err, data) {
+describe('triggerBuild', function() {
+  it('it should trigger build', function(testFinished) {
+    triggerBuild(auth, "job", 10, function(err, data) {
       assert.isNotOk(err, "Should not return error");
       assert.isOk(data, "Should return data");
       testFinished();

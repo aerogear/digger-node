@@ -28,23 +28,24 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "configstore": "^2.1.0",
-    "jenkins": "^0.20.0",
-    "readline-sync": "^1.4.5",
-    "underscore": "^1.8.3",
-    "winston": "^2.3.0",
-    "yargonaut": "^1.1.2",
-    "yargs": "^6.5.0"
+    "configstore": "2.1.0",
+    "jenkins": "0.20.0",
+    "readline-sync": "1.4.5",
+    "underscore": "1.8.3",
+    "winston": "2.3.0",
+    "yargonaut": "1.1.2",
+    "yargs": "6.5.0"
   },
   "engines": {
     "node": ">= 4"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-mocha-test": "^0.13.2",
-    "gruntify-eslint": "^3.1.0",
-    "mocha": "^3.2.0",
-    "proxyquire": "^1.7.10",
-    "sinon": "^1.17.6"
+    "chai": "3.5.0",
+    "grunt": "1.0.1",
+    "grunt-mocha-test": "0.13.2",
+    "gruntify-eslint": "3.1.0",
+    "mocha": "3.2.0",
+    "proxyquire": "1.7.10",
+    "sinon": "1.17.6"
   }
 }

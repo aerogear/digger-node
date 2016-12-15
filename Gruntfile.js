@@ -6,7 +6,8 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     eslint: {
-      src: ['lib/**/*.js', 'bin/*.js'],
+      options: { fix: true },
+      src: ['lib/**/*.js', 'bin/*.js','test/**/*.js'],
     },
     mochaTest: {
       test: {
