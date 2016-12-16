@@ -4,8 +4,6 @@
 [![Build Status](https://travis-ci.org/aerogear/digger-node.png)](https://travis-ci.org/aerogear/digger-node)
 [![License](https://img.shields.io/:license-Apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-
-
 AeroGear digger node.js command line client. 
 Create Jenkins job and build your application using Jenkinsfile located in your source code.
 
@@ -21,6 +19,11 @@ Create Jenkins job and build your application using Jenkinsfile located in your 
 |                 | [aerogear-dev](http://aerogear-dev.1069024.n5.nabble.com/) ([subscribe](https://lists.jboss.org/mailman/listinfo/aerogear-dev))  |
 | IRC:            | [#aerogear](https://webchat.freenode.net/?channels=aerogear) channel in the [freenode](http://freenode.net/) network.  |
 
+## Installation
+
+Install command line tool
+
+`npm install -g digkins`
 
 ## Sample use case
 
