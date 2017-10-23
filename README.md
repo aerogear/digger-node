@@ -39,27 +39,27 @@ digkins job create my-job https://github.com/android/project master
 
 Trigger build
 ```
-digkins job build my-androip-build
+digkins job build my-job
 ```
 
 ## Supported commands
 ```
+  # Setup jenkins credentials and login into jenkins
+  digkins login <url> [user] [password]
+
+  # Create jenkins job for git repository with Jenkinsfile
+  digkins job create <name> [repository] [branch]
+
   Trigger build for Jenkins job
   digkins job build <jobname>                
 
-  Create jenkins job for git repository with Jenkinsfile
-  digkins job create <name> [repository] [branch]  
-
-  Setup jenkins credentials and login into jenkins 
-  digkins login <url> [user] [password] 
-
-  Stream jenkins logs for triggered build
+  # Stream jenkins logs for triggered build
   digkins log <job> <buildNumber>       
   
-  Get job artifacts for specified build
+  # Get job artifacts for specified build
   digkins artifact <job> <buildNumber>   
 
-  Generate bash completion script
+  # Generate bash completion script
   digkins completion                     
 ```
 ## Development
@@ -70,3 +70,12 @@ digkins job build my-androip-build
 
 `npm link .` 
 
+## JSDoc generation
+Execute
+
+```
+npm run docs
+```
+
+This will generate some HTML from the JSDocs in the code.
+Go to `.docs/index.html` on your browser to see them.

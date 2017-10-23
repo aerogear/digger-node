@@ -54,3 +54,6 @@ jspm_packages
 
 # VS code files
 .vscode/
+
+# docs folder contains the generated JSDoc
+.docs
