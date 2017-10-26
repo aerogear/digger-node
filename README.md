@@ -13,7 +13,7 @@ Create Jenkins job and build your application using Jenkinsfile located in your 
 | --------------- | ------------- |
 | License:        | Apache License, Version 2.0  |
 | Build:          | Node  |
-| Documentation:  | https://github.com/aerogear/digger-jenkins  |
+| Documentation:  | https://github.com/aerogear/aerogear-digger  |
 | Issue tracker:  | https://issues.jboss.org/browse/AGDIGGER  |
 | Mailing lists:  | [aerogear-users](http://aerogear-users.1116366.n5.nabble.com/) ([subscribe](https://lists.jboss.org/mailman/listinfo/aerogear-users))  |
 |                 | [aerogear-dev](http://aerogear-dev.1069024.n5.nabble.com/) ([subscribe](https://lists.jboss.org/mailman/listinfo/aerogear-dev))  |
