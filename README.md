@@ -23,44 +23,44 @@ Create Jenkins job and build your application using Jenkinsfile located in your 
 
 Install command line tool
 
-`npm install -g digkins`
+`npm install -g aerogear-digger-node-client`
 
 ## Sample use case
 
 Login to Jenkins. Your credentials will be stored in configuration.
 ```
-digkins login http://myjenkins.com
+digger login http://myjenkins.com
 ```
 
 Create job that would use your repository as source code
 ```
-digkins job create my-job https://github.com/android/project master
+digger job create my-job https://github.com/android/project master
 ```
 
 Trigger build
 ```
-digkins job build my-job
+digger job build my-job
 ```
 
 ## Supported commands
 ```
   # Setup jenkins credentials and login into jenkins
-  digkins login <url> [user] [password]
+  digger login <url> [user] [password]
 
   # Create jenkins job for git repository with Jenkinsfile
-  digkins job create <name> [repository] [branch]
+  digger job create <name> [repository] [branch]
 
   Trigger build for Jenkins job
-  digkins job build <jobname>                
+  digger job build <jobname>                
 
   # Stream jenkins logs for triggered build
-  digkins log <job> <buildNumber>       
+  digger log <job> <buildNumber>       
   
   # Get job artifacts for specified build
-  digkins artifact <job> <buildNumber>   
+  digger artifact <job> <buildNumber>   
 
   # Generate bash completion script
-  digkins completion                     
+  digger completion                     
 ```
 ## Development
 

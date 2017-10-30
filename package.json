@@ -1,10 +1,10 @@
 {
-  "name": "digkins",
+  "name": "digger",
   "version": "1.0.0",
-  "description": "AeroGear Digger node.js client",
-  "main": "./bin/digkins.js",
+  "description": "AeroGear Digger Node client",
+  "main": "./bin/digger.js",
   "bin": {
-    "digkins": "./bin/digkins.js"
+    "digger": "./bin/digger.js"
   },
   "scripts": {
     "test": "grunt test",
