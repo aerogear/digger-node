@@ -2,7 +2,7 @@
   "name": "aerogear-digger-node-client",
   "version": "1.0.0",
   "description": "AeroGear Digger Node client",
-  "main": "./bin/digger.js",
+  "main": "./lib/api/index.js",
   "bin": {
     "digger": "./bin/digger.js"
   },
